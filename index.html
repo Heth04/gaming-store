@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head> 
+<meta charset="UTF-8">
+<title>Completar datos</title> 
+</head> 
+<style>
+html {
+            font-size: 2.4vh;
+        }
+        body {
+            margin: 0%;
+            background-color: #14D7F2;
+            color: white;
+            letter-spacing: 1px;
+        }
+        /* Cuadros grandes */
+        form {
+            width: fit-content ;
+            margin: 23vh auto;
+            box-shadow: 0px 0px 2.3vh #041961;
+            
+            padding: 4vh;
+            background: linear-gradient(to right, #146DF2, #1159C3);
+            font-family: Arial;
+        }
+        
+        #st {
+            overflow: auto;
+        }
+
+        #nd {
+            text-align: center;
+        }
+a        
+        /* Cuadros pequeños */
+        #cuenta, #producto, #pago {
+            padding: 0.8vh 2.4vh;
+            width: 28vh;height: 23vh;
+        }
+        
+        @media (min-aspect-ratio: 1254/937) {
+            #cuenta, #producto, #pago {
+                float: left;
+            }
+            #cuenta {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            }
+            #producto, #pago {
+                border-right: 1px solid black;
+            }
+        }
+        @media (max-aspect-ratio: 1253/937) {
+            #cuenta, #producto, #pago {
+                border-left: 1px solid white;
+                border-right: 1px solid white;;
+            }
+        }
+
+        /* Inputs */
+        input, textarea,input[type="number"] {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0.4vh;
+        }
+        textarea { 
+            width: 96.7%;
+            height: 5.2vh;
+            margin: 1vh 0px;
+            overflow-y: auto;
+            resize: none;
+            font-size: 0.7em;
+        }
+        input[type="checkbox"] {
+            display: inline-block;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 0.8vh;
+            width: 16vh;
+            font-size: 0.8em;
+            margin: 3.2vh 1.6px;
+            margin-bottom: 0px;
+            background-color: #07AA9B;
+            border: #1ECFFF solid 0.5vh;
+            color: white;
+            border-radius: 0.7vh;
+        }
+        input[type="number"] {
+            width: 2vh;
+            font-size: 0.7em;
+            display: none;
+            margin: 0px 0.4vh;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        textarea:focus, input:focus:focus {
+            border-color: #1ECFFF;
+            box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #1EFF2E;
+            outline: 0 none;
+        }
+        
+
+        /* Texto */
+
+        p {
+            font-size: 0.9em;
+            margin: 1.2vh 0px;
+        }
+        label {
+            font-size: 0.7em;
+        }
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #0;
+}
+
+#myBar {
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: #1EFF2E;
+}
+</style>
+<body> 
+
+<form action="jijijija.html" method="post">
+<div>
+<center>  
+<font color="Black">
+<h1> Gaming Store </h1></center> 
+</font>
+ </div>
+ <p> 
+<h4> Nombre: </h4><input type="text" name="name_control" autofocus required />
+ <br />
+<h4>Correo Electrónico: </h4><input type="email" name="email_control" required />
+ <br />
+<h4> Número de teléfono: </h4> <input type="tel" name="tel_control" /> <br /> 
+ <br />
+ <center>
+ <h3> Elija el metodo de pago: </h3>
+ <br>
+ <select name="pago_control"> <option value="Elije una Opcion"> Elije una Opción </option> <option value="Paypal"> Paypal </option> <option value="tddoc">Tarjeta de Crédito o Debito</option> <option value="efectivo">Pagar en Oxxo</option> </select> 
+<br/> 
+<h3>¿Qué productos deseas comprar?</h3>
+<br> <input name="lenguaje_control" type="checkbox" value="html5"/> Procesador Intel Core i9  
+<br>
+Cant.<input type="tel" name="1" autofocus required  maxlength="2" size="2" />
+<br>
+<input name="lenguaje_control" type="checkbox" value="ccs3"/> Mouse Gamer RGB 
+<br>
+Cant.<input type="tel" name="2" autofocus required  maxlength="2" size="2" />
+<br>
+<input name="lenguaje_control" type="checkbox" value="javascript"/> Monitor 30''" 
+<br>
+Cant.<input type="tel" name="3" autofocus required  maxlength="2" size="2" />    
+<br>
+<input name="lenguaje_control" type="checkbox" value="php"/> Tarjeta Grafica GTX-3090 
+<br>
+Cant.<input type="tel" name="4" autofocus required  maxlength="2" size="2" />    
+<br>
+<input name="lenguaje_control" type="checkbox" value="python"/> SSD 5 TB
+<br>
+Cant.<input type="tel" name="5" autofocus required  maxlength="2" size="2" /> 
+<br/>
+
+ <h3>¿Cómo quieres recibir tus productos?</h3>    
+ <br> <input name="python_control" type="radio" value="si"/>Entrega en Domicilio
+<br>
+ <input name="python_control" type="radio" value="no" /> Retirar en Paqueteria<br/> 
+ <br>
+ <h3>Nota para los vendedores:</h3>
+ <textarea name="comentario_control" rows="4" cols="50"></textarea> 
+<br/>
+ <button onclick="move()"> Guardar </button>
+ <input type="reset" value="Borrar">
+ <button onclick="alert('Los Datos han sido Modificados con Exito');">
+  Modificar
+</button>
+
+
+<br>
+ 
+</center>
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 10;
+  var id = setInterval(frame, 0.1);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+            div = document.getElementById('flotante');
+            div.style.display = '';
+        }
+
+        function cerrar() {
+            div = document.getElementById('flotante');
+            div.style.display = 'none';
+        }
+}
+</script>
+<div id="flotante" style="display:none;">
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+ <button>
+<a href="jijijija.html"> Finalizar Pedido </a> </button> </div>
+
+ </body> </html>
